@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Madimi One", sans-serif;
+}
+body {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+#one {
+  background-image: url("assets/images/Spider-man.jpg");
+}
+#two {
+  background-image: url("assets/images/Thor.jpg");
+}
+#three {
+  background-image: url("assets/images/Iron-man.jpg");
+}
+#four {
+  background-image: url("assets/images/Hulk.jpg");
+}
+#five {
+  background-image: url("assets/images/CptainAmerica.jpg");
+}
+#heading {
+  background-color: rgba(211, 191, 37, 0.165);
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 10px;
+}
+.title {
+  font-size: 29px;
+  color: #fff;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  width: 90vw;
+}
+.frame {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 700ms ease-in;
+}
+.frame h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.focused {
+  flex: 5;
+}
+.focused h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .frame:nth-of-type(4),
+  .frame:nth-of-type(5) {
+    display: none;
+  }
+}
